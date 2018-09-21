@@ -52,7 +52,8 @@ class UserController extends Controller
     {
         $user_id = Auth::id();
         $user = User::join('teams', 'teams.user_id', '=', 'users.id')->find($user_id);
-        return view('index.user.baseData',['item'=>'baseData','user'=>$user]);
+        $team_id = $user->user_id;
+        return view('index.user.baseData',['item'=>'baseData','user'=>$user, 'team_id'=>$team_id]);
     }
 
     function resetPasswordValidator($data)

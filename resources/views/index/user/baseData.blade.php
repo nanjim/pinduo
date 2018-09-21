@@ -2,7 +2,8 @@
 <?php error_reporting(E_ERROR);?>
 @section('content')
 <div class="myprofile-board">
-	<i class="fa fa-address-card fa-fw"></i>&nbsp; 基本资料 <a href="{{route('index.baseData.edit')}}" style="color: #F1990B;cursor: pointer"><i class="fa fa-edit fa-fw"></i>编辑</a>
+	<i class="fa fa-address-card fa-fw"></i>&nbsp; 基本资料 <a href="{{route('index.baseData.edit')}}" style="color: #F1990B;cursor: pointer">
+		{{$team_id ? '<i class="fa fa-edit fa-fw text-edit"></i>编辑</a>' : ''}}
 	<hr>
 	<div>
 		<span class="user-item col-md-2">团队名称：</span><span class="col-md-2">{{$user->name}}</span><br><br>
