@@ -24,7 +24,7 @@ class AddSite
         $user_id = $user->id;
         $avatar = 'img/avatar1.png';
         $url = config('app.site').'/mobile/index?user_id='.$user_id;
-
+        dd($url);
         $site['user_id'] = $user_id;
         $site['link'] = $url;
         $site['shortlink'] = $this->getShortLink($url);
