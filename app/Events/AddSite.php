@@ -23,7 +23,7 @@ class AddSite
     {
         $user_id = $user->id;
         $avatar = 'img/avatar1.png';
-        $url = env('APP_URL').'/mobile/index?user_id='.$user_id;
+        $url = config('app.site').'/mobile/index?user_id='.$user_id;
 
         $site['user_id'] = $user_id;
         $site['link'] = $url;
