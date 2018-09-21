@@ -24,7 +24,6 @@ class AddSite
         $user_id = $user->id;
         $avatar = 'img/avatar1.png';
         $url = config('app.site').'/mobile/index?user_id='.$user_id;
-        dd($url);
         $site['user_id'] = $user_id;
         $site['link'] = $url;
         $site['shortlink'] = $this->getShortLink($url);
@@ -49,6 +48,7 @@ class AddSite
     function getShortLink($url)
     {
         $url_short =  file_get_contents("http://mrw.so/api.php?url=".$url);
+        dd($url_short);
 //        $is_url = preg_match("/http:\/\//", $url_short);
 //        if (!$is_url) {
 //            return $this->getShortLink($url);
