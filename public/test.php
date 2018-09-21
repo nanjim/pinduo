@@ -6,6 +6,7 @@ function test ()
     if (substr($res, 0, 4) == 'http') {
         echo $res;
     } else {
+        echo 'err';
         test();
     }
 
