@@ -4,8 +4,6 @@
 /storage/*.key
 /storage
 /vendor
-!/vendor/laravel
-!/vendor/latrell
 /.idea
 /.vscode
 /.vagrant
