@@ -2,11 +2,9 @@
 <?php error_reporting(E_ERROR);?>
 @section('content')
 <div class="myprofile-board">
-	<i class="fa fa-address-card fa-fw"></i>&nbsp; 基本资料 <a href="{{route('index.baseData.edit')}}" style="color: #F1990B;cursor: pointer">
+	<i class="fa fa-address-card fa-fw"></i>&nbsp; 基本资料
 		@if($has_team)
-			<i class="fa fa-edit fa-fw text-edit"></i>编辑</a>
-		@else
-		123
+			<a href="{{route('index.baseData.edit')}}" style="color: #F1990B;cursor: pointer"><i class="fa fa-edit fa-fw text-edit"></i>编辑</a>
 		@endif
 	<hr>
 	<div>
