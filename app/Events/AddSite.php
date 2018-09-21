@@ -47,7 +47,7 @@ class AddSite
 
     function getShortLink($url)
     {
-        $url_short =  file_get_contents("http://mrw.so/api.php?url=".$url);
+        $url_short =  file_get_contents("http://mrw.so/api.php?url=$url");
         dd($url_short);
 //        $is_url = preg_match("/http:\/\//", $url_short);
 //        if (!$is_url) {
