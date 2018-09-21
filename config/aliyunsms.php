@@ -2,7 +2,7 @@
 
 
 return [
-    'access_key'        => env('ALIYUN_SMS_AK'), // accessKey
-    'access_secret'     => env('ALIYUN_SMS_AS'), // accessSecret
-    'sign_name'         => env('ALIYUN_SMS_SIGN_NAME'), // 签名
+    'access_key'        => 'LTAIwJTbnGkXI0Va', // accessKey
+    'access_secret'     => 'MSlYlacxrCC6UM7m01hhI66Uy9JZwb', // accessSecret
+    'sign_name'         => '惠麦客', // 签名
 ];
