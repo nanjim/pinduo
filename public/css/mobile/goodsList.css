@@ -1,0 +1,53 @@
+/*商品列表*/
+    a {
+        color: #4A4949;
+    }
+    .mescroll {
+        height: 100%;
+    }
+    .coupon {
+        background: -webkit-linear-gradient(right bottom,#ff865f,#ff3c98);
+        color: white;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        padding: 3px 5px;
+        font-size: 12px;
+    }
+    .origin-price {
+        color: #B5B5B5;
+    }
+    .after-price {
+        color: #D74343;
+    }
+    .list-item {
+		background: #333232;
+	}
+    .goods-item {
+        padding: 0 1px 2px 1px;
+        width: 50%;
+        display: inline-block;
+        background: #F1F1F1;
+    }
+    .goods-inner-item {
+    	background: white;
+    	padding: 0.5rem;
+    }
+    .goods-item a:hover,.goods-item a:active{
+        text-decoration: none;
+        color: #323309;
+    }
+    .goods-item img{
+        width: 100%;
+    }
+    .goods-item .goods-title {
+    	height: 4.5rem;
+    }
+    .goods-item p {
+        margin-bottom: 3px;
+    }
+    .goods-item .sale {
+        color: #CACACA;
+        font-size: 12px;
+        float: right;
+    }

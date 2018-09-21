@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ 
+ <body>
+	<div id="test">
+   <button v-on:click="star()">点击</button> 
+  </div>
+ </body>
+</html>
+<script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+<script>
+  var test = new Vue({
+    el: '#test',
+    methods: {
+      star: function() {
+        alert(123);
+      }
+    }
+  })
+</script>
