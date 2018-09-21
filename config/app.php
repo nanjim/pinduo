@@ -14,7 +14,7 @@ return [
     */
 
     'name' => '惠麦客',
-    'site' => $_SERVER['DOCUMENT_ROOT'],
+    'site' => $_SERVER['SERVER_NAME'],
     /*
     |--------------------------------------------------------------------------
     | Application Environment
