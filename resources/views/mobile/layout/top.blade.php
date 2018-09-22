@@ -18,7 +18,7 @@
         @endif
     @endforeach
 </div>
-<div class="flash swiper-container">
+<div class="flash swiper-container"> 
     <div class="swiper-wrapper">
         @foreach($flashs as $flash)
             <div class="swiper-slide"><a href="{{$flash->link}}"><img src="{{URL::asset($flash->img_url)}}" class="banner" alt="" /></a></div>
