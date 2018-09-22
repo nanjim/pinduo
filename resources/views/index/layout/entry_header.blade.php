@@ -1,5 +1,30 @@
 <?php error_reporting(E_ERROR);?>
+
+<style>
+    .top-line {
+        height: 2rem;
+        background: #F2F2F2;
+        padding: 0 15rem;
+        border-bottom: 1px solid #EEEEEE;
+    }
+    .top-line a {
+        margin-left: 1.5rem;
+        color: #FF6C0C;
+        line-height: 2rem;
+    }
+</style>
+@guest
+    <div class="top-line">
+        <a class="pull-right" href="{{ route('register') }}">
+            {{ __('注册') }}
+        </a>
+        <a class="pull-right" href="{{ route('login') }}">
+            {{ __('登录') }}
+        </a>
+    </div>
+@endguest
 <div class="container-fluid header-top">
+
     <div class="row">
 
         <div class="col-md-2 logo-box">
@@ -30,16 +55,7 @@
         <div class="col-md-3 ">
             <ul class="nav-list">
                 @guest
-                    <a class="" href="{{ route('register') }}">
-                        <li class="nav-item col-md-4">
-                            {{ __('注册') }}
-                        </li>
-                    </a>
-                    <a class="" href="{{ route('login') }}">
-                        <li class="nav-item col-md-4">
-                            {{ __('登录') }}
-                        </li>
-                    </a>
+
                 @else
                     <a href="{{route('index.myprofile.baseData')}}"><img id="header-avatar" src="{{URL::asset(Auth::user()->avatar ? 'upload/'.Auth::user()->avatar : 'img/avatar1.png')}}" alt=""></a>
                     <li class="nav-item dropdown">

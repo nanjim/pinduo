@@ -12,7 +12,7 @@ input {outline: none}
 #logo {width: 50px;height: 50px;}
 .navbar-brand {padding: 0;text-align: center;}
 .dropdown-toggle:after {display: none;}
-.header-top {padding: 30px 50px;background: white}
+.header-top {padding: 0 50px;background: white; padding-top:1rem;}
 .logo-box {text-align: center;}
 .nav-title-item a{color: #9A9998;display: block;text-align: center;height: 50px;}
 .nav-title-item h5 {line-height: 50px;}

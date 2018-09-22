@@ -1,5 +1,32 @@
 <?php error_reporting(E_ERROR);?>
+
+<style>
+    .top-line {
+        height: 2rem;
+        background: #F2F2F2;
+        padding: 0 15rem;
+        border-bottom: 1px solid #EEEEEE;
+    }
+    .top-line a {
+        margin-left: 1.5rem;
+        color: #FF6C0C;
+        line-height: 2rem;
+    }
+</style>
+<?php if(auth()->guard()->guest()): ?>
+    <div class="top-line">
+        <a class="pull-right" href="<?php echo e(route('register'), false); ?>">
+            <?php echo e(__('注册'), false); ?>
+
+        </a>
+        <a class="pull-right" href="<?php echo e(route('login'), false); ?>">
+            <?php echo e(__('登录'), false); ?>
+
+        </a>
+    </div>
+<?php endif; ?>
 <div class="container-fluid header-top">
+
     <div class="row">
 
         <div class="col-md-2 logo-box">
@@ -30,18 +57,7 @@
         <div class="col-md-3 ">
             <ul class="nav-list">
                 <?php if(auth()->guard()->guest()): ?>
-                    <a class="" href="<?php echo e(route('register'), false); ?>">
-                        <li class="nav-item col-md-4">
-                            <?php echo e(__('注册'), false); ?>
 
-                        </li>
-                    </a>
-                    <a class="" href="<?php echo e(route('login'), false); ?>">
-                        <li class="nav-item col-md-4">
-                            <?php echo e(__('登录'), false); ?>
-
-                        </li>
-                    </a>
                 <?php else: ?>
                     <a href="<?php echo e(route('index.myprofile.baseData'), false); ?>"><img id="header-avatar" src="<?php echo e(URL::asset(Auth::user()->avatar ? 'upload/'.Auth::user()->avatar : 'img/avatar1.png'), false); ?>" alt=""></a>
                     <li class="nav-item dropdown">
@@ -59,7 +75,6 @@
                                 <?php echo e(__('退出'), false); ?>
 
                             </a>
-
                             <form id="logout-form" action="<?php echo e(route('logout'), false); ?>" method="POST" style="display: none;">
                                 <?php echo csrf_field(); ?><br>
                             </form>
