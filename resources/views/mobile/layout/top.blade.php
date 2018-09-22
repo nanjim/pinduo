@@ -17,8 +17,8 @@
             <a href="{{route('mobile.index.index', ['cat_id'=>$cat->id])}}"><div class="cat-item"><span>{{$cat->name}}</span></div></a>
         @endif
     @endforeach
-</div>
-<div class="flash swiper-container"> 
+</div> 
+<div class="flash swiper-container">
     <div class="swiper-wrapper">
         @foreach($flashs as $flash)
             <div class="swiper-slide"><a href="{{$flash->link}}"><img src="{{URL::asset($flash->img_url)}}" class="banner" alt="" /></a></div>
