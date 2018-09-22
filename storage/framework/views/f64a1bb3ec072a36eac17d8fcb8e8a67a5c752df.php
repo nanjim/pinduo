@@ -43,7 +43,7 @@
                         </li>
                     </a>
                 <?php else: ?>
-                    <a href="<?php echo e(route('index.myprofile.baseData'), false); ?>"><img id="header-avatar" src="<?php echo e(URL::asset('upload/'.Auth::user()->avatar), false); ?>" alt=""></a>
+                    <a href="<?php echo e(route('index.myprofile.baseData'), false); ?>"><img id="header-avatar" src="<?php echo e(URL::asset(Auth::user()->avatar ? 'upload/'.Auth::user()->avatar : 'img/avatar1.png'), false); ?>" alt=""></a>
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             <?php echo e(Auth::user()->mobile, false); ?> <span class="caret"></span>
