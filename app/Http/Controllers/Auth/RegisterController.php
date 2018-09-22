@@ -109,10 +109,10 @@ class RegisterController extends Controller
             }
         }
 
-        $data['status'] = true;
-        $data['vcode'] = 1234;
-        session(['vcode'=>1234]);
-        return response()->json($data);
+//        $data['status'] = true;
+//        $data['vcode'] = 1234;
+//        session(['vcode'=>1234]);
+//        return response()->json($data);
 
         $res = $this->sendSMS($request);
 

@@ -23,7 +23,7 @@
         @foreach($flashs as $flash)
             <div class="swiper-slide"><a href="{{$flash->link}}"><img src="{{URL::asset($flash->img_url)}}" class="banner" alt="" /></a></div>
         @endforeach
-    </div> 
+    </div>
     <div class="swiper-pagination"></div>
 </div>
 <div class="sort">
