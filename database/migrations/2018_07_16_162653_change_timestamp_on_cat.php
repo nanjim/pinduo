@@ -13,7 +13,7 @@ class ChangeTimestampOnCat extends Migration
      */
     public function up()
     {
-        Schema::table('cat', function (Blueprint $table) {
+        Schema::table('cats', function (Blueprint $table) {
             $table->dropColumn(['created_at','updated_at']);
         });
     }
@@ -25,7 +25,7 @@ class ChangeTimestampOnCat extends Migration
      */
     public function down()
     {
-        Schema::table('cat', function (Blueprint $table) {
+        Schema::table('cats', function (Blueprint $table) {
 
         });
     }
