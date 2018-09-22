@@ -23,7 +23,7 @@
         <?php $__currentLoopData = $flashs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $flash): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="swiper-slide"><a href="<?php echo e($flash->link, false); ?>"><img src="<?php echo e(URL::asset($flash->img_url), false); ?>" class="banner" alt="" /></a></div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-    </div>
+    </div> 
     <div class="swiper-pagination"></div>
 </div>
 <div class="sort">
