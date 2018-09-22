@@ -45,7 +45,7 @@ abstract class AbstractPaginator implements Htmlable
      *
      * @var array
      */
-    public $query = []; //protected
+    public $query = []; //origin:protected
 
     /**
      * The URL fragment to add to all URLs.
