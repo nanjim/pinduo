@@ -22,17 +22,12 @@ class AddSite
     public function __construct($user)
     {
         $user_id = $user->id;
-        $avatar = 'img/avatar1.png';
         $url = config('app.site').'/mobile/index?user_id='.$user_id;
         $site['user_id'] = $user_id;
         $site['link'] = $url;
         $site['shortlink'] = $this->getShortLink($url);
 
         \DB::table('sites')->insert($site);
-        $hasAvatar = \DB::table('users')->where('id', '=', $user_id)->value('avatar');
-        if (!$hasAvatar) {
-            \DB::table('users')->where('id', '=', $user_id)->update(['avatar'=>$avatar]);
-        }
     }
 
     /**
