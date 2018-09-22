@@ -16,7 +16,7 @@
         @else
             <a href="{{route('mobile.index.index', ['cat_id'=>$cat->id])}}"><div class="cat-item"><span>{{$cat->name}}</span></div></a>
         @endif
-    @endforeach 
+    @endforeach
 </div>
 <div class="flash swiper-container">
     <div class="swiper-wrapper">
