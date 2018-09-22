@@ -34,7 +34,6 @@
     <script>
         $(document).on('click', '.change-title', function () {
             var title = $('#title').val();
-            alert(title);
             var token = "{{csrf_token()}}";
             $.ajax({
                 type: 'post',
