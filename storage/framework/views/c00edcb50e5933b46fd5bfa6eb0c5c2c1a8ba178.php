@@ -18,7 +18,7 @@
         <hr>
 
         <div class="form-group row">
-            <label class="col-2 control-label">我的网站链接：<?php echo e($_SERVER['SERVER_NAME'], false); ?></label>
+            <label class="col-2 control-label">我的网站链接：</label>
             <div class="col-8">
                 <input name="link" id="copy-content" readonly type="text" class="form-control" value="<?php echo e($site->shortlink, false); ?>">
             </div>

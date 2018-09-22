@@ -236,6 +236,7 @@ class UserController extends Controller
     function changeTitle(Request $request)
     {
         $title = $request->input('title');
+        return response()->json($title);
         $user_id = Auth::user()->id;
         $res = \DB::table('sites')->where('user_id', '=', $user_id)->update(['title'=>$title]);
         if ($res) {
