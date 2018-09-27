@@ -15,6 +15,11 @@
         <link rel="stylesheet" href="{{URL::asset('css/main.css')}}">
         <link rel="stylesheet" href="{{URL::asset('css/foot.css')}}">
         <link href="{{URL::asset('css/font-awesome.min.css')}}" rel="stylesheet">
+        <style>
+            #wrap {
+                padding: 0 8%;
+            }
+        </style>
     @show
 </head>
 <body>
