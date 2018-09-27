@@ -48,7 +48,7 @@
 			border-left: 1px solid #C0C0C0;
 		}
 		.coupon-line {
-			padding-bottom: 0.5rem;
+			padding-bottom: 1rem;
 		}
 	</style>
 @endsection
