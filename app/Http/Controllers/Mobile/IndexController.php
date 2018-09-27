@@ -79,11 +79,4 @@ class IndexController extends Controller
         return response()->json($goods_data);
     }
 
-    function test(Request $request)
-    {
-        $flashs = Photo::where('type','mindex')->orderBy('sort')->take(4)->get();
-        return view('mobile.index.test', ['flashs'=>$flashs]);
-    }
-
-
 }

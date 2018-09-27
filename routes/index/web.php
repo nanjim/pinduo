@@ -53,10 +53,8 @@ Route::group(['namespace'=>'Index', 'prefix'=>'index'],function(){
 //图片上传
     Route::post('/uploadImg', 'UserController@uploadImg')->name('index.uploadImg');
 //  测试
-    Route::get('/test1','IndexController@test1');
-    Route::post('/test','IndexController@testPost');
-    Route::get('/test2','IndexController@test2');
-    Route::get('/testU','UserController@test');
+    Route::get('/testRedis', 'EntryController@testRedis');
+    Route::get('/test', 'EntryController@test');
 
 });
 Route::post('/sendMessage', 'Auth\RegisterController@sendMessage')->name('index.sendMessage');

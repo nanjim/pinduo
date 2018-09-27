@@ -6,6 +6,7 @@ use App\Http\Traits\UserGoods;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Events\getMsgCount;
+use Illuminate\Support\Facades\Redis;
 
 class EntryController extends Controller
 {
@@ -76,9 +77,15 @@ class EntryController extends Controller
         event(new getMsgCount());
     }
 
+    function testRedis()
+    {
+        Redis::setex('name', 10, 'hi');
+    }
+
     function test()
     {
-
+        $name = Redis::get('name');
+        echo $name;
     }
 
 

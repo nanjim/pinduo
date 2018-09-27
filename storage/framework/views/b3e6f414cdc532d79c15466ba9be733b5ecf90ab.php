@@ -15,6 +15,11 @@
         <link rel="stylesheet" href="<?php echo e(URL::asset('css/main.css'), false); ?>">
         <link rel="stylesheet" href="<?php echo e(URL::asset('css/foot.css'), false); ?>">
         <link href="<?php echo e(URL::asset('css/font-awesome.min.css'), false); ?>" rel="stylesheet">
+        <style>
+            #wrap {
+                padding: 0 8%;
+            }
+        </style>
     <?php echo $__env->yieldSection(); ?>
 </head>
 <body>

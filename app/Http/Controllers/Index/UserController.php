@@ -337,9 +337,4 @@ class UserController extends Controller
         return response()->json($res);
     }
 
-    function test()
-    {
-        Star::destroy(['2158622785']);
-    }
-
 }
