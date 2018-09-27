@@ -50,6 +50,9 @@
 		.coupon-line {
 			padding-bottom: 1rem;
 		}
+		.spread-area img {
+			width: 100%;
+		}
 	</style>
 @endsection
 @section('content')
@@ -80,7 +83,7 @@
             @endif
 			<div class="card col-md-9">
 				<div class="card-body ">
-					<i class="fa fa-cube" aria-hidden="true"></i><span>商品详情</span>
+					<i class="fa fa-cube text-green" aria-hidden="true"></i><span> 商品详情</span>
 					<hr>
 					<div class="row">			
 						<div class="col-md-5 align-self-start">
@@ -128,7 +131,6 @@
 								<span class="col-md-4">计划{{$data->promotion_rate/10}}%</span>
 							</p>
 							<p class="solid"></p>
-
 								<p>
 									<span>已领
 										<span class="text-red">{{$data->coupon_total_quantity-$data->coupon_remain_quantity}}</span>/{{$data->coupon_total_quantity}}
@@ -142,21 +144,34 @@
 							<p>
 								{{$data->goods_desc}}
 							</p>
-							<p>
-								下单链接：<a id="link" target="_blank" href="http://mobile.yangkeduo.com/goods2.html?goods_id={{$goods_id}}">http://mobile.yangkeduo.com/goods2.html?goods_id={{$goods_id}}</a>
-							</p>
-							<p class="text-center"><button class="btn btn-success trans-link-btn">一键转链</button></p>
+						</div>
+					</div>
+					<br>
+					<div>
+						<p><i class="fa fa-copy text-green"></i> <b>推广文案</b></p>
+					</div>
+					<hr>
+					<div class="spread-area row">
+						<div class="col-3">
+							<img src="{{$data->goods_thumbnail_url}}" alt="">
+						</div>
+						<div id="copy-text" class="col-9" style="">
+							<p>{{$data->goods_name}}<br>
+								【在售价{{$data->min_group_price/100}}元】券后【{{($data->min_group_price-$data->coupon_discount)/100}}元】</p>
+							<p>{{$data->goods_desc}}</p>
+							<p>下单链接：<a id="link" target="_blank" href="http://mobile.yangkeduo.com/goods2.html?goods_id={{$goods_id}}">http://mobile.yangkeduo.com/goods2.html?goods_id={{$goods_id}}</a></p>
+							<p class="text-center"><button data-clipboard-target="#copy-text" class="btn btn-success copy-btn">一键复制</button></p>
 						</div>
 					</div>
 				</div>
-			</div>
 
+			</div>
 	</div>
-	
 @endsection
 
 @section('js')
 @parent
+<script src="https://cdn.bootcss.com/clipboard.js/2.0.0/clipboard.min.js"></script>
 <script>
 	$(function(){
 
@@ -168,20 +183,31 @@
 			$(this).css('border',"none");
 		});
 
-		$(".trans-link-btn").click(function () {
-		    var btn = $(this);
-		    var link = $('#link').text();
-		    $.ajax({
-				type: "get",
-				url: '{{route('index.shortlink')}}',
-				data: {'link': link},
-				success:function (res) {
-					console.log(res);
-					$('#link').text(res);
-					btn.hide();
-                }
-			});
+
+        var clipboard = new ClipboardJS('.copy-btn');
+        clipboard.on('success',function(e) {
+            e.clearSelection();
+            if (e.trigger.disabled == false || e.trigger.disabled == undefined) {
+                e.trigger.innerHTML = "复制成功";
+                e.trigger.style.backgroundColor = "#9ED29E";
+                e.trigger.style.borderColor = "#9ED29E";
+                e.trigger.disabled = true;
+                setTimeout(function() {
+                        e.trigger.innerHTML = "一键复制";
+                        e.trigger.style.backgroundColor = "green";
+                        e.trigger.style.borderColor = "green";
+                        e.trigger.disabled = false;
+                    },
+                    2000);
+            }
+        });
+        clipboard.on('error',function(e) {
+            e.trigger.innerHTML = "复制失败,请手动复制";
+            e.trigger.style.backgroundColor = "#8f8f8f";
+            e.trigger.style.borderColor = "#8f8f8f";
         });
 	})
+
+
 </script>
 @endsection

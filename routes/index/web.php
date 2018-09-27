@@ -27,7 +27,6 @@ Route::group(['namespace'=>'Index', 'prefix'=>'index'],function(){
     Route::get('/myprofile/test','SpreadController@test')->name('testspread');
     Route::post('/spread','SpreadController@addTeam')->name('index.spread');
     Route::get('/team_show', 'GoodsController@teamShow')->name('index.team_show');
-    Route::get('/shortlink', 'GoodsController@getShortLink')->name('index.shortlink');
 //个人中心
     Route::get('/myprofile/spread','SpreadController@showSpread')->name('index.myprofile.spread');
     Route::get('/myprofile/baseData','UserController@showBaseData')->name('index.myprofile.baseData');

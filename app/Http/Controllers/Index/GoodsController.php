@@ -145,14 +145,6 @@ class GoodsController extends Controller
      * @param Request $request
      * 将长链接转成短链接
      */
-    function getShortLink(Request $request)
-    {
-
-        $link = $request->input("link");
-        $shortlink = $this->transLink($link);
-        return response()->json($shortlink);
-    }
-
     function transLink($link)
     {
         $url_short =  file_get_contents("http://mrw.so/api.php?url=".$link);
