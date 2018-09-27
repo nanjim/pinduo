@@ -47,7 +47,9 @@
 		.owner-bottom .right {
 			border-left: 1px solid #C0C0C0;
 		}
-
+		.coupon-line {
+			padding-bottom: 0.5rem;
+		}
 	</style>
 @endsection
 @section('content')
@@ -116,7 +118,7 @@
 								</p>
 							</div>
 							<p class="solid"></p>
-							<p class="row text-center">
+							<p class="row text-center coupon-line">
 								<span class="col-md-4">
 									<span class="shit rounded">券</span>
 									<span class="shit-amount text-red">￥{{$data->coupon_discount/100}}</span></span>
