@@ -6,5 +6,6 @@
 	<a href="{{route('index.myprofile.myStar')}}">我的收藏</a>
 </div>
 <div class="text-center" style="background: white;height: 2rem;line-height: 2rem">
-	惠麦客 <span style="font-weight: 600">2017-{{date('Y', time())}}</span>
+	<span style="font-weight: 600">CopyRight 2016-{{date('Y', time())}} |  惠麦客 hmkapp.com | 浙ICP备17052092号-2
+</span>
 </div>

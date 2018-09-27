@@ -6,5 +6,6 @@
 	<a href="<?php echo e(route('index.myprofile.myStar'), false); ?>">我的收藏</a>
 </div>
 <div class="text-center" style="background: white;height: 2rem;line-height: 2rem">
-	惠麦客 <span style="font-weight: 600">2017-<?php echo e(date('Y', time()), false); ?></span>
+	<span style="font-weight: 600">CopyRight 2016-<?php echo e(date('Y', time()), false); ?> |  惠麦客 hmkapp.com | 浙ICP备17052092号-2
+</span>
 </div>
