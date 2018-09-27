@@ -155,8 +155,4 @@ class GoodsController extends Controller
         return $url_short;
     }
 
-
-
-
-
 }

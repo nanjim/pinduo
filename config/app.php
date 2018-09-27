@@ -14,7 +14,7 @@ return [
     */
 
     'name' => '惠麦客',
-    'site' => $_SERVER['SERVER_NAME'],
+    'site' => 'tao.hmkapp.com',
     /*
     |--------------------------------------------------------------------------
     | Application Environment

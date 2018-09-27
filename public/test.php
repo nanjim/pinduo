@@ -65,18 +65,12 @@ class PDOtest {
 
     function test()
     {
-         $res = array();
-         $handler = opendir('./upload/');
-         while ($file = readdir($handler)) {
-             $res[] = $file;
-         }
-         var_dump($res);
+        echo $_SERVER['SERVER_NAME'];
     }
 
 }
 
 $pdo = new PDOtest();
-$arr = [5, 1, 8, 7, 3, 9, 4, 0];
-$res = $pdo->quikSort($arr);
-var_dump($res);
+$pdo->test();
+
 
