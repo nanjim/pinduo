@@ -18,9 +18,6 @@
 		}
 		.goods-info {
 		}
-		.row {
-			padding: 0.5rem;
-		}
 		.star-item img {
 			width: 100%;
 		}
