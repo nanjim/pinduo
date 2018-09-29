@@ -2,7 +2,7 @@
 * @Author: liiuchunlei
 * @Date:   2018-07-14 08:24:25
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-09-27 13:54:22
+* @Last Modified time: 2018-09-29 15:33:58
 */
 input {outline: none}
 #keyword{width:80%;outline: none;background: white;font-size: 15px;border: none;height: 36px;margin-top: 2px;margin-left: 10px;color: #A6A5A5}
@@ -25,7 +25,7 @@ a,a:hover {
 	padding: 0;
 }
 .header-title-nav {
-	padding: 0 50px;
+	padding: 0 8%;
 	background: white;
 }
 .nav-on {
@@ -42,7 +42,7 @@ a,a:hover {
 }
 
 .option {
-	padding: 20px 50px;
+	padding: 20px 8%;
 	background: white
 }
 .option .cat-item {
@@ -72,7 +72,7 @@ a,a:hover {
 }
 .sort {
 	line-height:2.5rem;
-	margin-left:1rem;
+	margin-left: 6%;
 }
 .sort li {
 	list-style: none;
@@ -103,11 +103,10 @@ a,a:hover {
 	color:orange;
 }
 .goods-container {
-	margin-top: 30px;
-	padding: 40px;
+	padding: 2.5rem 8%;
 }
 .goods-container .card {
-	width: 23%;
+	width: 24%;
 	margin-top: 1rem;
 }
 .goods-img img {

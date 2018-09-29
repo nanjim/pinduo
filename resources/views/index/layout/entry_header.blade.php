@@ -4,25 +4,38 @@
     .top-line {
         height: 2rem;
         background: #F2F2F2;
-        padding: 0 15rem;
+        padding: 0 12%;
         border-bottom: 1px solid #EEEEEE;
     }
-    .top-line a {
-        margin-left: 1.5rem;
+    .top-line .login-item {
+        color: #FF6C0C;
+        line-height: 2rem;
+    }
+    .top-line .sep {
+        margin: 0 1rem;
         color: #FF6C0C;
         line-height: 2rem;
     }
 </style>
+<div class="top-line">
 @guest
-    <div class="top-line">
-        <a class="pull-right" href="{{ route('register') }}">
-            {{ __('注册') }}
-        </a>
-        <a class="pull-right" href="{{ route('login') }}">
-            {{ __('登录') }}
-        </a>
-    </div>
+    <a class="pull-right login-item" href="{{ route('register') }}">
+        {{ __('注册') }}
+    </a>
+    <span class="pull-right sep">|</span>
+    <a class="pull-right login-item" href="{{ route('login') }}">
+        {{ __('登录') }}
+    </a>
+@else
+    <a class="pull-right login-item" href="{{ route('index.myprofile.baseData') }}">
+        {{ __('个人中心') }}
+    </a>
+    <span class="pull-right sep">|</span>
+    <a class="pull-right login-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.querySelector('#logout-form').submit();">
+        {{ __('退出') }}
+    </a>
 @endguest
+    </div>
 <div class="container-fluid header-top">
 
     <div class="row">

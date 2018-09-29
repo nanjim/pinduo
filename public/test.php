@@ -65,12 +65,34 @@ class PDOtest {
 
     function test()
     {
-        echo $_SERVER['SERVER_NAME'];
+        $subject = "www.php.aaa.net";
+//        $pattern = "#^(?:http://)?([^/]+)#i";
+        $pattern = "/[^.]+\.[^.]+/";
+        preg_match_all($pattern, $subject, $matchs);
+        var_dump($matchs);
     }
+
+    function test1()
+    {
+        $sub = "aabbaacc";
+        $patt = "/aa(?:b|c)/";
+        preg_match_all($patt, $sub, $matchs);
+        var_dump($matchs);
+    }
+
+    function hshs()
+    {
+        $a = ['a'=>12];
+        $b = ['a'=>45];
+        var_dump($a+$b);
+    }
+
+
+
 
 }
 
 $pdo = new PDOtest();
-$pdo->test();
+$pdo->hshs();
 
 
