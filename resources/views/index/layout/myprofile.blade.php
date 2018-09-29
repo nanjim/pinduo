@@ -119,7 +119,7 @@
         color: #FF6C0C;
         line-height: 2rem;
     }
-    .col-md-4, .col-md-2 {
+    .col-md-4 {
         padding: 0;
     }
 </style>
