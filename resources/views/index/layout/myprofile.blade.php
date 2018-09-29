@@ -34,7 +34,6 @@
     #logo {width: 50px;height: 50px;}
     .navbar-brand {padding: 0;text-align: center;}
     .dropdown-toggle:after {display: none;}
-    .header-top {padding: 30px 50px;background: white}
     .logo-box {text-align: center;}
     .nav-title-item a{color: #9A9998;display: block;text-align: center;height: 50px;}
     .nav-title-item h5 {line-height: 50px;}
@@ -46,16 +45,15 @@
     .header-title-nav .navbar {
         padding: 0;
     }
-    .header-title-nav {
-        padding: 0 50px;
-        background: white;
-    }
     .nav-on {
         background: #FF7500;
         color: white !important;
     }
     .hot-search,.hot-search a {
         color: #BDBDBD
+    }
+    .left-menu ul {
+        margin-left: -50px;
     }
     .nav-list li{
         float: right;
@@ -65,7 +63,7 @@
         padding: 10px;
     }
     .main-board {
-        padding: 30px 5px;
+        padding: 1rem 8%;
     }
     .left-menu li {
         list-style: none;
@@ -74,8 +72,9 @@
         width: 100%;
         display: block;
         background: white;
-        padding: 10px 30px;
-        color: #979696
+        padding: 1rem 0;
+        color: #979696;
+        padding-left: 3rem;
     }
     .left-menu a:hover,a.menu-now {
         color: white;
@@ -105,6 +104,24 @@
     .btn-mysite {
         height: 2.5rem;
     }
+     .top-line {
+         height: 2rem;
+         background: #F2F2F2;
+         padding: 0 8%;
+         border-bottom: 1px solid #EEEEEE;
+     }
+    .top-line .login-item {
+        color: #FF6C0C;
+        line-height: 2rem;
+    }
+    .top-line .sep {
+        margin: 0 1rem;
+        color: #FF6C0C;
+        line-height: 2rem;
+    }
+    .col-md-4, .col-md-2 {
+        padding: 0;
+    }
 </style>
 <body>
     <div id="app">
@@ -113,7 +130,7 @@
             <div class="col-md-2">
                 @include('index.layout.left_menu')
             </div>
-            <div class="col-md-9">
+            <div class="col-md-10">
                 @yield('content')
             </div>
         </div>

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="myprofile-board ">
-	<div class="col-md-8">
+	<div class="col-md-8 offset-md-2">
 		@if(session('success'))
 			<div class="alert alert-success">
 		    	<i class="fa fa-check"></i>{{session('success')}}

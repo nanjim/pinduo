@@ -2,7 +2,7 @@
 * @Author: liiuchunlei
 * @Date:   2018-07-14 08:24:25
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-09-29 15:33:58
+* @Last Modified time: 2018-09-29 15:48:06
 */
 input {outline: none}
 #keyword{width:80%;outline: none;background: white;font-size: 15px;border: none;height: 36px;margin-top: 2px;margin-left: 10px;color: #A6A5A5}
@@ -12,7 +12,7 @@ input {outline: none}
 #logo {width: 50px;height: 50px;}
 .navbar-brand {padding: 0;text-align: center;}
 .dropdown-toggle:after {display: none;}
-.header-top {padding: 0 50px;background: white; padding-top:1rem;}
+.header-top {padding: 0 8%;background: white; padding-top:1rem;}
 .logo-box {text-align: center;}
 .nav-title-item a{color: #9A9998;display: block;text-align: center;height: 50px;}
 .nav-title-item h5 {line-height: 50px;}

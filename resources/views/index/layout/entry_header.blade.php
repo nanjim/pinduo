@@ -4,7 +4,7 @@
     .top-line {
         height: 2rem;
         background: #F2F2F2;
-        padding: 0 12%;
+        padding: 0 8%;
         border-bottom: 1px solid #EEEEEE;
     }
     .top-line .login-item {
@@ -16,26 +16,11 @@
         color: #FF6C0C;
         line-height: 2rem;
     }
+    .col-md-4 {
+        padding: 0;
+    }
 </style>
-<div class="top-line">
-@guest
-    <a class="pull-right login-item" href="{{ route('register') }}">
-        {{ __('注册') }}
-    </a>
-    <span class="pull-right sep">|</span>
-    <a class="pull-right login-item" href="{{ route('login') }}">
-        {{ __('登录') }}
-    </a>
-@else
-    <a class="pull-right login-item" href="{{ route('index.myprofile.baseData') }}">
-        {{ __('个人中心') }}
-    </a>
-    <span class="pull-right sep">|</span>
-    <a class="pull-right login-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.querySelector('#logout-form').submit();">
-        {{ __('退出') }}
-    </a>
-@endguest
-    </div>
+@include('index.layout.top')
 <div class="container-fluid header-top">
 
     <div class="row">
@@ -65,30 +50,15 @@
             </div>
         </div>
 
-        <div class="col-md-3 ">
+        <div class="col-md-4 pull-right">
             <ul class="nav-list">
                 @guest
 
                 @else
-                    <a href="{{route('index.myprofile.baseData')}}"><img id="header-avatar" src="{{URL::asset(Auth::user()->avatar ? 'upload/'.Auth::user()->avatar : 'img/avatar1.png')}}" alt=""></a>
-                    <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->mobile }} <span class="caret"></span>
-                        </a>
-
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('index.myprofile.baseData') }}">
-                                {{ __('个人中心') }}
-                            </a>
-
-                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.querySelector('#logout-form').submit();">
-                                {{ __('退出') }}
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf<br>
-                            </form>
-                        </div>
-                    </li>
+                    <a class="pull-right" href="{{route('index.myprofile.baseData')}}"><img id="header-avatar" src="{{URL::asset(Auth::user()->avatar ? 'upload/'.Auth::user()->avatar : 'img/avatar1.png')}}" alt=""></a>
+                    <span class="pull-right" style="line-height: 3rem;margin-right: 1rem">
+                        {{ Auth::user()->mobile }} <span class="caret"></span>
+                    </span>
                 @endguest
             </ul>
         </div>
