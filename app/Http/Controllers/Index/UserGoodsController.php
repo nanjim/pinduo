@@ -100,7 +100,6 @@ class UserGoodsController extends Controller
         $goods = DB::table('outer_goods')->where($params);
         $goodsData = DB::table('goods')->where($params)->unionAll($goods)->orderBy($sort['sort_name'], $sort['sort_type'])->get()->all();
         $res = array_slice($goodsData, ($page-1)*100, 100);
-        dd($res);
         $paginator = new LengthAwarePaginator($res, count($goodsData), 100);
         $paginator->setPath(Paginator::resolveCurrentPath());
         $paginator->query = $query;
@@ -108,22 +107,5 @@ class UserGoodsController extends Controller
 
         return $paginator;
     }
-
-    function searchGoods()
-    {
-
-    }
-
-    function showDetail()
-    {
-
-    }
-
-    function test(Request $request)
-    {
-        dd($request->all());
-    }
-
-
 
 }
