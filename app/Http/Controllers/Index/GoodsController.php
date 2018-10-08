@@ -127,7 +127,6 @@ class GoodsController extends Controller
         }
         $res['status'] = true;
         $res['data'] = $data;
-        dd($res);
         return $res;
     }
 
