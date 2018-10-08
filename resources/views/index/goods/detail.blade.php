@@ -126,7 +126,7 @@
 									<span class="shit rounded">券</span>
 									<span class="shit-amount text-red">￥{{$data->coupon_discount/100}}</span></span>
 								<span class="col-md-4">佣金
-									<span class="text-red">￥{{(($data->min_group_price-$data->coupon_discount)*$data->promotion_rate)/100000}}</span>
+									<span class="text-red">￥{{round((($data->min_group_price-$data->coupon_discount)*$data->promotion_rate)/100000, 2)}}</span>
 								</span>
 								<span class="col-md-4">计划{{$data->promotion_rate/10}}%</span>
 							</p>
