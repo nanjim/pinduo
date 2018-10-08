@@ -55,7 +55,6 @@
 		}
 	</style>
 @endsection
-{{dd($data)}}
 @section('content')
 	<div class="detail-container d-flex flex-wrap justify-content-around"> 
 

@@ -107,9 +107,6 @@ class UserGoodsController extends Controller
 
         return $paginator;
     }
-    function test()
-    {
-        
-    }
+
 
 }
