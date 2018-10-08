@@ -9,7 +9,7 @@
     <div id="goods-list" class="goods-list d-flex flex-wrap justify-content-around">
         @include('index.goods.goodsList',['data'=>$goodsList])
     </div><br>
-    <div class="page text-center col-md-12">
+    <div class="page text-center" style="margin-left: 28%">
         {{$goodsList->render()}}
     </div>
 </div>
