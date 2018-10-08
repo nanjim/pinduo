@@ -21,7 +21,7 @@
 			</div>
 			<div class="coupon-msg goods-item">
 				<span>
-					<i class="fa fa-ticket" aria-hidden="true"></i> ￥{{$item->coupon_discount/100}}
+					<i class="fa fa-ticket" aria-hidden="true"></i> ￥ {{($item->min_group_price-$item->coupon_discount)/100}}
 				</span>
 				<span class="pull-right">
 					余{{$item->coupon_remain_quantity > 0 ?: 0}}/{{$item->coupon_total_quantity ?: 0}}
@@ -32,7 +32,7 @@
 			  	</div>
 			</div>
 			<div class="price goods-item">
-				<span>券后</span>￥{{($item->min_group_price-$item->coupon_discount)/100}} 
+				<span>券后</span>￥ {{$item->coupon_discount/100}}
 				<!-- <span><button>复制文案</button></span> -->
 				<span class="pull-right">销量{{$item->sold_quantity}}</span>
 			</div>
