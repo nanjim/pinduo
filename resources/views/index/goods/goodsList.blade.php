@@ -1,4 +1,4 @@
-
+{{dd($goodsList[0])}}
 @if(!$goodsList->totalSize>0)
     暂未找到相关产品
 @else
