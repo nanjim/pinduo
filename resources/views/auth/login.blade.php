@@ -17,7 +17,6 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-
                         <div class="form-group row">
                             <label for="mobile" class="col-sm-3 col-form-label text-md-right">{{ __('手机号') }}</label>
 
@@ -73,15 +72,13 @@
                         {{--</div>--}}
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn col-md-6 btn-orange offset-md-3" style="width: 100%;">
                                     {{ __('登录') }}
                                 </button>
 
                                 <a class="btn btn-link" href="{{ route('password.getReset') }}">
                                     {{ __('忘记密码?') }}
                                 </a>
-                            </div>
                         </div>
                     </form>
                 </div>
