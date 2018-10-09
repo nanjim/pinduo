@@ -1,5 +1,5 @@
 
-<div class="foot-wrap col-md-12 text-center" style="height: 2rem;line-height: 2rem; width: 100vw;padding: 0;">
+<div class="foot-wrap col-md-12 text-center" style="height: 4rem;line-height: 2rem; width: 100vw;padding: 0;background: white;">
 	<a href="{{route('entry')}}">首页 |</a>
 	<a href="{{route('index.myprofile.spread')}}">放单后台 |</a>
 	<a href="{{route('index.myprofile.baseData')}}">个人中心 |</a>

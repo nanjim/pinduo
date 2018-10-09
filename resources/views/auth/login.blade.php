@@ -87,7 +87,6 @@
     </div>
 </div>
 @endsection
-
 @section('js')
     <script>
         var status = "{{session('status')}}";

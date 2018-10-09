@@ -22,6 +22,12 @@
     <link href="{{ asset('css/common.css') }}" rel="stylesheet">
     <!-- <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}"> -->
 </head>
+<style>
+    .foot-wrap {
+        position: absolute;
+        bottom: 0;
+    }
+</style>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
@@ -77,6 +83,7 @@
             @yield('content')
         </main>
     </div>
+    @include('index.layout.foot')
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.min.js"></script>
 @section('js')
