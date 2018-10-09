@@ -1,20 +1,27 @@
 @extends('layouts.app')
-
+<style>
+    #bg {
+        position: absolute;
+        width: 100%;
+    }
+</style>
 @section('content')
-<div class="container">
+    <img id="bg" src="{{asset('img/login_bg.png')}}" alt="">
+
+    <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-5 offset-md-7" style="margin-top: 2rem">
             <div class="card">
                 <div class="card-header">{{ __('登录') }}</div>
-
+                
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="mobile" class="col-sm-4 col-form-label text-md-right">{{ __('手机号') }}</label>
+                            <label for="mobile" class="col-sm-3 col-form-label text-md-right">{{ __('手机号') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-7">
                                 <input id="mobile" type="text" class="form-control{{ $errors->has('mobile') ? ' is-invalid' : '' }}" name="mobile" value="{{ old('mobile') }}" autofocus autocomplete="off">
 
                                 @if ($errors->has('mobile'))
@@ -26,9 +33,9 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('密码') }}</label>
+                            <label for="password" class="col-md-3 col-form-label text-md-right">{{ __('密码') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-7">
                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" autocomplete="off">
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback">
@@ -39,7 +46,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('验证码') }}</label>
+                            <label for="password" class="col-md-3 col-form-label text-md-right">{{ __('验证码') }}</label>
 
                             <div class="col-md-3">
                                 <input id="captcha" type="text" class="form-control{{ $errors->has('captcha') ? ' is-invalid' : '' }}" name="captcha" autocomplete="off">
