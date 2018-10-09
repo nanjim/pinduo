@@ -9,15 +9,6 @@ return [
             'index' => 1,
             'route' => 'entry'
         ],
-        // '2' => [
-        //     'name' => '今日榜单',
-        //     'index' => 2,
-        //     'route' => 'entry'
-        // ],
-        // '3' => [
-        //     'name' => '我的网站',
-        //     'index' => 3,
-        //     'route' => 'entry'
-        // ],
+        
     ],
 ];
