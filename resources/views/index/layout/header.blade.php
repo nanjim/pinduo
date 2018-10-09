@@ -69,14 +69,14 @@
 <div class="header-title-nav">
     <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
         <div class="nav-title-item">
-            <a href="{{url('/')}}" class="nav-click {{isset($nav) && $nav=='index' ? 'nav-on' : ''}}"><h5>实时爆款</h5></a>
+            <a href="{{url('/')}}" class="nav-click {{isset($nav) && $nav=='index' ? 'nav-on' : ''}}"><h5>拼多多</h5></a>
         </div>
-        <div class="nav-title-item">
+        <!-- <div class="nav-title-item">
             <a href="{{url('/top')}}" class="nav-click {{isset($nav) && $nav=='top' ? 'nav-on' : ''}}"><h5>今日榜单</h5></a>
         </div>
         <div class="nav-title-item">
             <a href="{{url('/mysite')}}" class="nav-click {{isset($nav) && $nav=='mysite' ? 'nav-on' : ''}}"><h5>我的网站</h5></a>
-        </div>
+        </div> -->
     </nav>
 </div>
             
