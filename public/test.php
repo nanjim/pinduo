@@ -63,7 +63,7 @@ class PDOtest {
         }
     }
 
-    function test()
+    function reg()
     {
         $subject = "www.php.aaa.net";
 //        $pattern = "#^(?:http://)?([^/]+)#i";
@@ -72,27 +72,16 @@ class PDOtest {
         var_dump($matchs);
     }
 
-    function test1()
+    function test()
     {
-        $sub = "aabbaacc";
-        $patt = "/aa(?:b|c)/";
-        preg_match_all($patt, $sub, $matchs);
-        var_dump($matchs);
+        $str = "<>";
+        echo htmlentities($str);
     }
-
-    function hshs()
-    {
-        $a = ['a'=>12];
-        $b = ['a'=>45];
-        var_dump($a+$b);
-    }
-
-
 
 
 }
 
 $pdo = new PDOtest();
-$pdo->hshs();
+$pdo->test();
 
 

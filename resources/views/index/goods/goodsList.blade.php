@@ -29,7 +29,7 @@
 					余{{$goods->coupon_remain}}
 				</span>
                 <div class="progress" style="height: 3px">
-                    <div class="progress-bar" style="width:{{$goods->coupon_num > 0 ? ($goods->coupon_num-$goods->coupon_remain)/$goods->coupon_num*100 : 0}}%;">
+                    <div class="progress-bar" style="width:{{$goods->coupon_num > 0 ? ($goods->coupon_num-$goods->coupon_remain)/$goods->coupon_num*100 : 0}}%;background: #FF6100;">
                     </div>
                 </div>
             </div>
