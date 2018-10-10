@@ -2,14 +2,14 @@
 * @Author: liiuchunlei
 * @Date:   2018-07-14 08:24:25
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-10-10 16:21:00
+* @Last Modified time: 2018-10-10 16:56:33
 */
 input {outline: none}
 #keyword{width:80%;outline: none;background: white;font-size: 15px;border: none;height: 36px;margin-top: 2px;margin-left: 10px;color: #A6A5A5}
 #search-btn {background: #F47808;color: white;height: 40px;margin-left: -5px;border: none;position: absolute;right: 0;padding: 0 20px;}
 #search-btn:hover {cursor:pointer;}
 .search-box {border: 2px solid #F47808;position: relative;height: 44px;}
-#logo {width: 50px;height: 50px;}
+#logo {height: 50px;}
 .navbar-brand {padding: 0;text-align: center;}
 .dropdown-toggle:after {display: none;}
 .header-top {padding: 0 8%;background: white; padding-top:1rem;}
